@@ -171,7 +171,7 @@ LOCAL_STATIC_LIBRARIES := libft2
 LOCAL_C_INCLUDES += external/freetype/include
 LOCAL_C_INCLUDES += frameworks/compile/libbcc/include
 
-LOCAL_CFLAGS += $(rs_base_CFLAGS)
+LOCAL_CFLAGS += $(rs_base_CFLAGS) -fno-strict-aliasing
 
 LOCAL_LDLIBS := -lpthread -ldl
 LOCAL_MODULE_TAGS := optional
@@ -218,6 +218,7 @@ LOCAL_GENERATED_SOURCES += $(GEN)
 LOCAL_CFLAGS += $(rs_base_CFLAGS)
 LOCAL_CFLAGS += -DANDROID_RS_SERIALIZE
 LOCAL_CFLAGS += -fPIC
+LOCAL_CFLAGS += -fno-strict-aliasing
 
 LOCAL_SRC_FILES:= \
 	rsAdapter.cpp \
